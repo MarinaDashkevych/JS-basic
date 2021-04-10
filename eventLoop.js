@@ -1,23 +1,24 @@
 //Event Loop
-// Передача call-back
 
-// const timeout = setTimeout(() => {  // принимает 2 аргумента (call-back  функцию и количество млСек)
-//     console.log('after timeout')
-// }, 2500)
-//
-// const interval = setInterval(() => {
-//     console.log('after time')
-// }, 2500)
-// // clearInterval(timeout) // очищяет  timeout
-//
-//
-// const delay = (callback, wait = 1000) => {
-//     setTimeout(callback, wait)
-// }
-//
-// delay( () => {
-//     console.log('After 2 sec')
-// }, 2000 )
+// Передача call-back
+const timeout = setTimeout(() => {  // принимает 2 аргумента (call-back  функцию и количество млСек)
+    console.log('after timeout')
+}, 2500)
+
+const interval = setInterval(() => {
+    console.log('after time')
+}, 2500)
+// clearInterval(timeout) // очищяет  timeout
+
+
+const delay = (callback, wait = 1000) => {
+    setTimeout(callback, wait)
+}
+
+delay( () => {
+    console.log('After 2 sec')
+}, 2000 )
+
 
 // Работа с Promise
 const delay2 = (wait = 1000) => {
@@ -42,8 +43,8 @@ const getData = () => new Promise(resolve => resolve([
 ]))
 getData().then(data => console.log(data))
 
-// Работа с асинхронностью  //отслеживание скрола на стене в ВК-астинхронный пример
 
+// Работа с асинхронностью  //отслеживание скрола на стене в ВК-астинхронный пример
 async function asyncExample() { // делаем функцию асинхронной async
     try {                    // оборачиваем в try{}catch(){}
         await delay2(3000) // await одижание заданое в милисекундах
