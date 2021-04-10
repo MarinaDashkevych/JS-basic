@@ -21,6 +21,7 @@ function sendRequest(method, url, body = null) {  // длобавляем пар
     })
 }
 
+
 // sendRequest('GET', requestURL)       // для метода GET
 //     .then(data => console.log((data)))
 //     .catch(err => console.log(err))
@@ -33,3 +34,12 @@ const body = {  // создаем переменную body
 sendRequest('GET', requestURL,body)
     .then(data => console.log((data)))
     .catch(err => console.log(err))
+
+
+//
+// $(document).ready(function () {
+//     $('button').on('click', function () {
+//         console.log('hello world');
+//         $('input.title').val();
+//
+//     });
